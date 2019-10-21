@@ -2,10 +2,10 @@ import React from 'react';
 
 function BootstrapCard(props) {
     return(
-        <div className="card" style={{width: "100%"}}>
+        <div className="card" style={{width: "100%", marginBottom: "24px"}}>
             {props.hasHeader && 
                 <div className="card-header">
-                    {props.headerContent}
+                    <strong>{props.headerContent}</strong>
                 </div>
             }
             <div className="card-body">
