@@ -6,7 +6,7 @@ export default class Select extends React.Component {
             <select className="form-control" style={{ width: "100%" }} onChange={this.props.fnchange}>
                 {this.props.options.map((item) => {
                     return (
-                        <option value={item.cod}>
+                        <option key={item.cod} value={item.cod}>
                             {item.descricao}
                         </option>
                     )
