@@ -9,6 +9,7 @@ function BootstrapButton(props) {
         <button
             className={btnClass}
             onClick={props.fnClick}
+            disabled={props.disabled}
         >
             {props.text}
         </button>
