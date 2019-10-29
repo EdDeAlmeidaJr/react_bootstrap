@@ -1,16 +1,20 @@
 import React from 'react';
 
-function BootstrapInput(props) {
-    let inputSize = ((props.size) ? " form-control-" + props.size : "");
-    let inputClass = "form-control" + inputSize;
-    return(
-        <input
-            type={props.type}
-            className={inputClass}
-            placeholder={props.placeholder}
-            onChange={props.fnChange}
-        />
-    )
-}
+export default class BootstrapInput extends React.Component {
 
-export default BootstrapInput;
+    handleChange = (ev) => {
+        this.props.fnChange(ev.target.value);
+    }
+    render() {
+        let inputSize = ((this.props.size) ? " form-control-" + this.props.size : "");
+        let inputClass = "form-control" + inputSize;
+        return(
+            <input
+                type={this.props.type}
+                className={inputClass}
+                placeholder={this.props.placeholder}
+                onChange={this.handleChange}
+            />
+        )
+    }
+}
