@@ -5,11 +5,13 @@ function BootstrapButton(props) {
     let btnSize = ((props.size) ? " btn-" + props.size : "");
     let btnBlock = ((props.block) ? " btn-block" : "");
     let btnClass = "btn" + btnType + btnSize + btnBlock;
+    let marginR = props.marginRight + 'px';
     return (
         <button
             className={btnClass}
             onClick={props.fnClick}
             disabled={props.disabled}
+            style={{marginRight: marginR}}
         >
             {props.text}
         </button>
