@@ -12,6 +12,7 @@ function BootstrapButton(props) {
             onClick={props.fnClick}
             disabled={props.disabled}
             style={{marginRight: marginR}}
+            {...props}
         >
             {props.text}
         </button>
